@@ -33,5 +33,5 @@ int main()
 ``` 
 - run 
 `opt -load <llvm path>/build/lib/LLVMmodule_dir.so -enable-new-pm=0 -legacy-inject-func-call bb.ll -o bb.bin`
-<path>/lli bb.bin
+`<path>/lli bb.bin`
 
