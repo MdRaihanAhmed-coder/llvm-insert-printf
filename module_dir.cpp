@@ -201,4 +201,3 @@ char LegacyInjectFuncCall::ID = 0;
 static RegisterPass<LegacyInjectFuncCall>
     X(/*PassArg=*/"legacy-inject-func-call", /*Name=*/"LegacyInjectFuncCall",
       /*CFGOnly=*/false, /*is_analysis=*/false);
-#include "InjectFuncCall.h"
