@@ -209,3 +209,13 @@ char LegacyInjectFuncCall::ID = 0;
 static RegisterPass<LegacyInjectFuncCall>
     X(/*PassArg=*/"legacy-inject-func-call", /*Name=*/"LegacyInjectFuncCall",
       /*CFGOnly=*/false, /*is_analysis=*/false);
+
+static void registerLegacyInjectFuncCall(const PassManagerBuilder &,
+                         legacy::PassManagerBase &PM) {
+  PM.add(new LegacyInjectFuncCall());
+}
+static RegisterStandardPasses
+  RegisterMyPass(PassManagerBuilder::EP_EarlyAsPossible,
+                 registerLegacyInjectFuncCall);
+
+
